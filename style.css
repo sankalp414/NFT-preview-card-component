@@ -1,0 +1,159 @@
+:root{
+  --clr--primary--200:hsl(215, 51%, 70%);
+  --clr--primary--300:hsla(178, 100%, 50%,70%);
+
+  --clr--neutral--900:hsl(217, 54%, 11%);
+  --clr--neutral--800:hsl(216, 50%, 16%);
+  --clr--neutral--700:hsl(215, 32%, 27%);
+  --clr--neutral--100:hsl(0, 0%, 100%);
+
+  --ff--accent:'Outfit', sans-serif;
+
+  --fw--light:300;
+  --fw--regular:400;
+  --fw--bold:600;
+}
+
+*{
+  margin: 0px;padding: 0px;box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--clr--neutral--900);
+
+}
+.product{
+  background-color:var(--clr--neutral--800);
+  border-radius: 0.75em;
+}
+.product__content{
+   padding: 20px;
+   max-width: 375px;
+   font-family: var(--ff--accent);
+
+  }
+  hr{
+    background-color: var(--clr--neutral--700);
+  }
+  
+  .product__img{
+    width: 100%;border-radius: 0.5em;
+  
+ 
+  
+  }
+  .product__image:hover .image {
+    opacity: 0.3;
+  }
+  
+  .product__image:hover .middle {
+    opacity: 1;
+  }
+
+  .creator__img{
+    width: 1.8em;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+
+  .creator__info{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .product__title{
+    color: var(--clr--neutral--100);
+    font-weight: var(--fw--bold);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  hr{
+     border: 1px solid  hsl(215, 32%, 27%);
+  }
+
+  p{
+    color: var(--clr--primary--200);
+     margin-bottom: 1.5rem;
+     margin-top: 1rem;
+     font-weight: var(--fw--light);
+    }
+
+  .product__stats{
+    display: flex;
+    gap: 8rem;
+    margin-bottom: 1rem;
+    font-weight: var(--fw--regular);
+  }
+
+  .creator__name{
+    color: var(--clr--neutral--100);
+  }
+
+  .creator__discription{
+    color: var(--clr--primary--200);
+    font-weight: var(--fw--regular);
+  }
+
+  .product__rate{
+    color: var(--clr--primary--300);
+  }
+
+  .img{
+    margin-right: 0.22em;
+    
+  }
+  
+ 
+  .product__image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .product__image::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--clr--primary--300);
+    display: none;
+  }
+  .product__overlay{
+    display: none;
+    position: absolute;
+    transition: .5s ease;
+    
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  .product__image:hover .product__overlay {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr--primary--300);
+     width: 100%;
+    height: 100%; 
+     border-radius: 0.5em;
+     cursor: pointer;
+  
+  }
+  .product__title:hover{
+     color: var(--clr--primary--300);
+     cursor: pointer;
+  }
+  .creator__name:hover{
+    color: var(--clr--primary--300);
+    cursor: pointer;
+  }
+  
+
